@@ -128,30 +128,3 @@ while True:
   answer = result.get("answer") or result.get("result") or result.get("output_text") or result.get("response")
   print(f"Answer: {answer} ")
 
-from google.colab import notebook
-notebook.exportNotebook('/content/Custom_Website_Chatbot.ipynb')
-
-# Commented out IPython magic to ensure Python compatibility.
-# %%javascript
-# (async function() {
-#   await google.colab.notebook.save();
-#   console.log("Notebook saved!");
-# })();
-#
-
-!find /content -maxdepth 2 -type f -name "*.ipynb"
-
-import json
-
-path = "/content/Custom_Website_Chatbot.ipynb"   # change if needed
-
-with open(path) as f:
-    nb = json.load(f)
-
-# Remove widget metadata safely
-if "widgets" in nb.get("metadata", {}):
-    del nb["metadata"]["widgets"]
-
-with open(path, "w") as f:
-    json.dump(nb, f)
-
