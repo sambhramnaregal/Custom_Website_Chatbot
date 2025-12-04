@@ -91,7 +91,7 @@ query_result=embeddings.embed_query("hello  how are oyu world")
 len(query_result)
 
 import os
-PINECONE_API_KEY=os.environ.get('PINECONE_API_KEY','pcsk_2JJQtW_S2RfAAX7e3YyBCK3bCz491JutEQEyfk3vhqr3pXpMbm2F441EuYtaT213a82qM5')
+PINECONE_API_KEY=os.environ.get('PINECONE_API_KEY','xxx')
 PINECONE_ENV=os.environ.get('us-east-1')
 
 !pip uninstall -y pinecone-client pinecone
